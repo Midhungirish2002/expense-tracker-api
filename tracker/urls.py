@@ -11,4 +11,5 @@ urlpatterns = [
     path('expenses/category/<str:category>/', views.expenses_by_category, name='expenses-by-category'),
     path('totals/day/<str:date>/', views.total_expense_day, name='total-day'),
     path('totals/month/<int:month>/<int:year>/', views.total_expense_month, name='total-month'),
+    path('token/refresh/', views.RefreshTokenView.as_view(), name='token-refresh'),
 ]
